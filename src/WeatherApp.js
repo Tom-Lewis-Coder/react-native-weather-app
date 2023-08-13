@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { ActivityIndicator, Text, View } from 'react-native';
-import { useQuery } from '@tanstack/react-query';
-import getWeather from './api/getWeather';
-import * as Location from 'expo-location';
-import { HeaderSection, CurrentWeather, ForecastSection } from './Container';
+import React, { useState, useEffect } from 'react'
+import { ActivityIndicator, Text, View } from 'react-native'
+import { useQuery } from '@tanstack/react-query'
+import getWeather from './api/getWeather'
+import * as Location from 'expo-location'
+import { HeaderSection, CurrentWeather, ForecastSection } from './Container'
 
 const WeatherApp = () => {
 

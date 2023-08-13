@@ -1,7 +1,9 @@
 {
   "expo": {
-    "name": "react-native-weather-app",
+    "name": "React Native Weather App",
     "slug": "react-native-weather-app",
+    "privacy": "public",
+    "description": "A mobile application that provides the current weather and 7 day forecast for the area",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +17,29 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tomlewis139.reactnativeweatherapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tomlewis139.reactnativeweatherapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9bc2b8ea-960d-44d6-bb3a-ee78e55505b1"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/9bc2b8ea-960d-44d6-bb3a-ee78e55505b1"
     }
   }
 }

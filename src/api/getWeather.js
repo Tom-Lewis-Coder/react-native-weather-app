@@ -1,4 +1,4 @@
-import { REACT_APP_WEATHER } from "@env";
+import { REACT_APP_WEATHER } from "@env"
 
 const api = {
   key: REACT_APP_WEATHER,

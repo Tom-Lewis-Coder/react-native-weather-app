@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text } from 'react-native'
 
 const getDayAndTime = () => {
   let fullDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']

@@ -1,4 +1,4 @@
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image } from 'react-native'
 
 const getDayNum = () => {
   let d = new Date()

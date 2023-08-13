@@ -1,5 +1,5 @@
-import { View, Text } from 'react-native';
-import DayComponent from '../Components/DayComponent';
+import { View, Text } from 'react-native'
+import DayComponent from '../Components/DayComponent'
 
 const ForecastSection = ({ data }) => {
   return (
