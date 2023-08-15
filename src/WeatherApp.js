@@ -35,8 +35,8 @@ const WeatherApp = () => {
       const data = await getWeather(coords)
       return data
     },
-    staleTime: Infinity,
-    cacheTime: 1 * 60 * 250
+    staleTime: 1000 * 60 * 10,
+    cacheTime: 1000 * 60 * 15
   })
 
   return (
