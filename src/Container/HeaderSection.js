@@ -6,12 +6,12 @@ const getDayAndTime = () => {
   return `${fullDays[d.getDay()]}, ${d.getHours()}:${d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes()} ${d.getHours() > 11 ? 'PM' : 'AM'}`
 }
 
-const HeaderSection = ({ location }) => {
+const HeaderSection = ({ location, permission }) => {
   return (
     <>
       <View style={{ 'flexDirection': 'row', 'justifyContent': 'space-between', 'alignItems': 'center', 'width': '100%', 'marginTop': 20 }}>
         <Text style={{ 'fontSize': 25, 'fontWeight': 'bold' }}>
-          {`${location[0]?.city}, ${location[0]?.region}`}
+          {permission ? `${location[0]?.city}, ${location[0]?.region}` : 'London, England'}
         </Text>
         <Text>
           =

@@ -9,13 +9,14 @@ const WeatherApp = () => {
 
   const [coords, setCoords] = useState([])
   const [location, setLocation] = useState([])
-  const [errorMsg, setErrorMsg] = useState(null)
+  const [permission, setPermission] = useState(true)
 
   useEffect(() => {
     const getLocation = async () => {
       const { status } = await Location.requestForegroundPermissionsAsync()
       if (status !== 'granted') {
-        setErrorMsg('Permission to access location denied.')
+        setCoords([51.5072, -0.1276])
+        setPermission(false)
       }
       const loc = await Location.getCurrentPositionAsync()
       setCoords([loc?.coords?.latitude, loc?.coords?.longitude])
@@ -42,12 +43,12 @@ const WeatherApp = () => {
   return (
     <View style={{ 'backgroundColor': '#fff', 'alignItems': 'center', 'padding': 20, 'height': 750, }}>
       {isLoading ? <ActivityIndicator size='large' style={{ 'marginTop': 300 }} /> : null}
-      {isError ? <Text style={{ 'marginTop': 300 }}>Couldn't load weather.</Text> :
-        errorMsg !== null ? <Text style={{ 'marginTop': 300 }}>{errorMsg}</Text> : null}
-      {(data && !errorMsg &&
+      {isError ? <Text style={{ 'marginTop': 300 }}>Couldn't load weather.</Text> : null}
+      {(data &&
         <>
           <HeaderSection
             location={location}
+            permission={permission}
           />
           <CurrentWeather
             src={data?.current?.weather[0]?.icon}
