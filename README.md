@@ -2,7 +2,7 @@
 A weather application that utilises the user's location and returns the current and 7 day weather information for that area.
 Built using React Native, Expo, Tanstack Query, Expo Location, and OpenWeatherMap API. 
 
-In order to view the app please ensure you have expo go downloaded and then scan the relevant QR code.
+In order to view the app please ensure you have expo go downloaded and then scan the relevant QR code and accept the location permission.
 
 Android
 ![AndroidQR](https://github.com/Tom-Lewis-Coder/react-native-weather-app/assets/64904837/8f45ee66-9095-469c-8219-228c05d61713)
