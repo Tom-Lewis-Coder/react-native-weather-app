@@ -18,11 +18,11 @@ const WeatherApp = () => {
         setErrorMsg('Permission to access location denied.')
       }
       const loc = await Location.getCurrentPositionAsync()
-      setCoords([loc.coords.latitude, loc.coords.longitude])
+      setCoords([loc?.coords?.latitude, loc?.coords?.longitude])
 
       const regionName = await Location.reverseGeocodeAsync({
-        longitude: loc.coords.longitude,
-        latitude: loc.coords.latitude
+        longitude: loc?.coords?.longitude,
+        latitude: loc?.coords?.latitude
       })
       setLocation(regionName)
     }
@@ -35,9 +35,9 @@ const WeatherApp = () => {
       const data = await getWeather(coords)
       return data
     },
+    staleTime: Infinity,
+    cacheTime: 1 * 60 * 250
   })
-
-  console.log(data)
 
   return (
     <View style={{ 'backgroundColor': '#fff', 'alignItems': 'center', 'padding': 20, 'height': 750, }}>
